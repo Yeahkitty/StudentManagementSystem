@@ -13,13 +13,8 @@ using namespace std;
 
 class Student : public Person{
 public:
-    Student(string n) : Person(n), enrolledCourses(nullptr), courseCount(0), courseCapacity(5) {
-        studentID = nextStudentID - 1;
-        enrolledCourses = new Course*[courseCapacity];
-    };
-    ~Student() {
-        delete[] enrolledCourses;
-    };
+    Student(string n) {};
+    ~Student() {};
 
 private:
     int studentID;
@@ -29,21 +24,7 @@ private:
 
     static int nextStudentID = 1;
 
-    void resizeCourseArray() {
-        if (courseCapacity == 0) int newCapacity = 5;
-        else int newCapacity = courseCapacity *= 2;
-        
-        Course** newArray = new Course*[newCapacity];
-
-        for (int i = 0; i < courseCount; ++i) {
-            newArray[i] = enrolledCourses[i];
-        }
-
-        delete[] enrolledCourses;
-
-        enrolledCourses = newArray;
-        courseCapacity = newCapacity;
-    };
+    void resizeCourseArray() {};
 };
 
 

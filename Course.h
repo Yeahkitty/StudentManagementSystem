@@ -7,29 +7,18 @@
 
 #include <iostream>
 #include <string>
-#include <stdexcept>
 
 using namespace std; 
 
 class Course {
 public:
-    Course(string& code, string& name, int& cred) : courseCode(code), courseName(name), credits(cred) {
-        if (code.empty() || name.empty() || cred < 0) throw invalid_argument("Invalid parameters");
-    }; //parametrized
+    Course(string& code, string& name, int& cred); //parametrized
 
-    string getCourseCode() const{
-        return courseCode;
-    }
-    string getCourseName() const {
-        return courseName;
-    }
-    int getCredits() const {
-        return credits;
-    };
+    string getCourseCode() const {};
+    string getCourseName() const {};
+    int getCredits() const {};
 
-    void displayDetails() const {
-        cout << "Code: " << courseCode << ", Name: " << courseName << ", Credits: " << credits;
-    }
+    void displayDetails() const {};
 
 
 private:
