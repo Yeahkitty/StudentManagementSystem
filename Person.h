@@ -9,23 +9,15 @@
 using namespace std;
 
 class Person {
-    public:
-    Person(int id, string name) : id(id), name(name) {};
-    virtual ~Person() {};
+public:
+    Person(int id, string name);
+    virtual ~Person();
 
-    int getId() const{
-        return id;
-    }
-    string getName() const{
-        return name;
-    }
+    int getId() const;
+    string getName() const;
 
-    void setId (int id) {
-        this->id = id;
-    }
-    void setName(string name) {
-        this->name = name;
-    }
+    void setId(int id);
+    void setName(string name);
 
     virtual void Display() const = 0;
 

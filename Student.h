@@ -13,8 +13,8 @@ using namespace std;
 
 class Student : public Person{
 public:
-    Student(string n) {};
-    ~Student() {};
+    Student(string n);
+    ~Student();
 
 private:
     int studentID;
@@ -24,7 +24,7 @@ private:
 
     static int nextStudentID = 1;
 
-    void resizeCourseArray() {};
+    void resizeCourseArray();
 };
 
 
